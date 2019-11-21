@@ -1,0 +1,9 @@
+{
+  "name": "js-struct-and-algorithm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.2.1"
+  }
+}
