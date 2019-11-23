@@ -1,6 +1,7 @@
 //import Stack from "./src/stack"
 import Queue from "./src/queue"
 import PriorityQueue from "./src/priority_queue"
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG, ENOLINK } from "constants"
 
 //十进制转二进制
 function divideBy2(decNumber) {
@@ -77,3 +78,27 @@ let priorityQueue = new PriorityQueue()
 // priorityQueue.enqueue("Camila",  1)
 // priorityQueue.print();
 //优先队列
+
+
+function hotPotato(nameList, num){
+    let queue = new Queue()
+
+    for (let i = 0; i < nameList.length; i ++){
+        queue.enqueue(nameList[i])
+    }
+
+    let eliminated = ''
+    while (queue.size() > 1){
+        for(let i = 0; i< num ; i++){
+            queue.enqueue(queue.dequeue())
+        }
+        eliminated = queue.dequeue()
+        console.log(eliminated + '在击鼓传花游戏中被淘汰。')
+    }
+
+    return queue.dequeue()
+}
+
+let names = ['John', 'Jack', 'Camia', 'Ingrid', 'Carl']
+let winner = hotPotato(names, 7)
+console.log(winner)
