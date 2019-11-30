@@ -1,20 +1,7 @@
-import { stringify } from "querystring"
-
-// let LinkedList = (function () { 
-//     const items = new WeakMap()
-
-    
-//     return LinkedList
-// })();
-
 let Node = function (element){
     this.element = element
     this.next = null
 }
-
-// let length = 0
-// let head = null      
-
 
 class LinkedList {
     constructor() {
