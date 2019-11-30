@@ -1,7 +1,7 @@
 //import Stack from "./src/stack"
 import Queue from "./src/queue"
 import PriorityQueue from "./src/priority_queue"
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG, ENOLINK } from "constants"
+import LinkedList from "./src/linked_list"
 
 //十进制转二进制
 function divideBy2(decNumber) {
@@ -79,7 +79,7 @@ let priorityQueue = new PriorityQueue()
 // priorityQueue.print();
 //优先队列
 
-
+//击鼓传花
 function hotPotato(nameList, num){
     let queue = new Queue()
 
@@ -99,6 +99,15 @@ function hotPotato(nameList, num){
     return queue.dequeue()
 }
 
-let names = ['John', 'Jack', 'Camia', 'Ingrid', 'Carl']
-let winner = hotPotato(names, 7)
-console.log(winner)
+// let names = ['John', 'Jack', 'Camia', 'Ingrid', 'Carl']
+// let winner = hotPotato(names, 7)
+// console.log(winner)
+//击鼓传花
+
+//单项链表
+// let list = new LinkedList();
+// list.append(15)
+// console.log(list.toString())
+// list.append(10)
+// console.log(list.toString())
+//单项链表
