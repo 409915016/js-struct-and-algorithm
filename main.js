@@ -2,6 +2,7 @@
 import Queue from "./src/queue"
 import PriorityQueue from "./src/priority_queue"
 import LinkedList from "./src/linked_list"
+import Dictionary from "./src/dictionary"
 
 //十进制转二进制
 function divideBy2(decNumber) {
@@ -163,4 +164,22 @@ let difference = function (setA, setB) {
 let differenceAB = difference(setA, setB)
 //console.log(differenceAB)
 
+//字典
+var dictionary = new Dictionary()
+dictionary.set('Gandalf', 'gandalf@email.com');
+dictionary.set('John', 'johnsnow@email.com');
+dictionary.set('Tyrion', 'tyrion@email.com');
 
+// console.log(dictionary.has('Gandalf'));   
+// console.log(dictionary.size());  
+
+// console.log(dictionary.keys()); 
+// console.log(dictionary.values()); 
+// console.log(dictionary.get('Tyrion')); 
+
+// dictionary.delete('John');
+
+// console.log(dictionary.keys()); 
+// console.log(dictionary.values());
+
+// console.log(dictionary.getItems());
