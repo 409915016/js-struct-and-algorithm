@@ -92,7 +92,7 @@ class LinkedList {
         return string
     }
     
-    indexOf(){
+    indexOf(element){
         let current = this.head,
         index = 0
 
