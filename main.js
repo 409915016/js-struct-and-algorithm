@@ -41,3 +41,16 @@ console.log(tree.max());
 console.log(tree.min());
 console.log(tree.search(1) ? 'Key 1 found.' : 'Key 1 not found.');
 console.log(tree.search(8) ? 'Key 8 found.' : 'Key 8 not found.');
+
+console.log('********* remove 6 ***********');
+tree.remove(6);
+tree.inOrderTraverse(printNode);
+
+console.log('********* remove 5 ***********');
+tree.remove(5);
+tree.inOrderTraverse(printNode);
+
+console.log('********* remove 15 ***********');
+tree.remove(15);
+tree.inOrderTraverse(printNode);
+

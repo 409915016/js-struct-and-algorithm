@@ -61,6 +61,44 @@ let postOrderTraverseNode = function(node, callback){
     }
 }
 
+let findMinNode = function(node){
+    while(node && node.left !== null){
+        node = node.left
+    }
+    return node
+}
+
+let removeNode = function(node, key){
+    if(node === null){
+        return null
+    }
+    if(key < node.key){
+        node.left = removeNode(node.left, key)
+        return node
+    } else if (key > node.key){
+        node.right = removeNode(node.right, key)
+        return node
+    } else {
+
+        if(node.left === null && node.right === null){
+            node = null
+            return node
+        }
+
+        if(node.left === null){
+            node = node.right
+            return node
+        } else if(node.right === null){
+            node = node.left
+            return node
+        }
+
+        var aux = findMinNode(node.right)
+        node.key = aux.key
+        node.right = removeNode(node.right, aux.key)
+        return node
+    }
+}
 
 class BinarySearchTree {
     constructor(key) {
@@ -94,6 +132,10 @@ class BinarySearchTree {
                 this.insertNode(node.right, newNode)
             }
         }
+    }
+    
+    remove(key){
+        this.root = removeNode(this.root, key)
     }
     min(){
         return minNode(this.root)
